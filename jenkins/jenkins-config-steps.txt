@@ -1,0 +1,98 @@
+How To Set Up Jenkins for Continuous Development Integration on CentOS 7:
+========================================================================
+
+
+https://www.digitalocean.com/community/tutorials/how-to-set-up-jenkins-for-continuous-development-integration-on-centos-7
+
+
+download jenkins
+================
+https://jenkins.io/download/
+
+
+https://wiki.jenkins.io/display/JENKINS/Installing+Jenkins+on+Red+Hat+distributions
+
+
+https://www.youtube.com/watch?v=89yWXXIOisk&list=PLhW3qG5bs-L_ZCOA4zNPSoGbnVQ-rp_dG&index=1
+
+
+https://www.edureka.co/blog/install-jenkins/
+
+
+
+Steps of installing Jenkins on CentOS 7:
+========================================
+
+Step 1: Install Java Version 8 (Jenkins is a Java based application, hence Java is a must)
+------------------------------------------------------------------------------------------
+
+Step 2: Install Apache Tomcat Version 8/9 (Tomcat is required to deploy Jenkins war file)
+-----------------------------------------------------------------------------------------
+
+Step 3: Download Jenkins war File (This war is required to install Jenkins)
+---------------------------------------------------------------------------
+
+Step 4: Deploy Jenkins war File (Jenkins war file needs to be deployed using Tomcat to run Jenkins)
+---------------------------------------------------------------------------------------------------
+
+Step 5: Install Suggested Plugins (Install a list of plugins suggested by Jenkins)
+----------------------------------------------------------------------------------
+
+
+Steps of Configuring Jenkins:
+=============================
+
+Step 1: Introduction and getting start jenkins
+==============================================
+
+Step 2: How to setup Jenkins on Tomcat
+======================================
+
+Step 3: How to change Home Directory
+====================================
+
+Step 4: How to use CLI (command line interface)
+===============================================
+
+
+Step 5: How to create Users + Manage + Assign Roles
+===================================================
+
+
+Step 6: Basic Configurations
+===========================
+
+Step 7: Getting started with JOBS
+=================================
+
+Step 8: Jenkins integration with GIT (SCM)
+==========================================
+
+Step 9: How to use CATLIGHT (Jenkins Build Monitor)
+==================================================
+
+Step 10: What is Automated Deployment (Step by Step)
+===================================================
+
+Step 11: How to do Automated Deployment (Step by Step)
+=====================================================
+
+Step 12: Notifications - How to send Email from Jenkins
+=======================================================
+
+Step 13: What is Pipeline in Jenkins (DevOps)
+=============================================
+
+Step 14: How to setup DELIVERY PIPELINE in Jenkins (Step by Step)
+=================================================================
+
+
+Step 15: How to setup BUILD PIPELINE in Jenkins (Step by Step)
+==============================================================
+
+
+Step 16: What is BLUE OCEAN (How to get started)
+================================================
+
+
+

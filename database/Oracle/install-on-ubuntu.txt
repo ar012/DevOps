@@ -1,0 +1,4 @@
+Oracle Database installation on Ubuntu 16.04
+
+
+http://misc.palash90.in/2016/11/oracle-database-installation-on-ubuntu.html

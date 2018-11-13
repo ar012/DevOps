@@ -1,0 +1,86 @@
+JENKINS_HOME
+	/DATA/devops/JenkinsHome
+
+
+local git repo:
+
+file:///home/abdurrazzak/JavaProject/ctrendsee
+
+To change db connection file
+============================
+db_con.sh
+---------
+#!/bin/bash
+cp spring-database.xml /home/abdurrazzak/javaproject/ctrendsee/src/main/webapp/WEB-INF/spring-database.xml
+
+
+cd /data/devops/AutoDeploy
+sh deploy.sh
+-----------
+#!/bin/sh
+# connect to database
+cp spring-database.xml /home/abdurrazzak/javaproject/ctrendsee/src/main/webapp/WEB-INF/spring-database.xml
+# create war file
+cd /home/abdurrazzak/javaproject/ctrendsee/src/main/webapp/
+jar -cf ctrendsee.war *
+# move the war file to jenkins working space
+mv ctrendsee.war /DATA/devops/JenkinsHome/workspace/AutoDeploy
+cd
+
+To run jenkins on the port 7070
+===============================
+java -jar jenkins.war --httpPort=7070
+
+To run from any location: keep the jenkins script file in /usr/local/bin/jekins
+========================
+jenkins
+-------
+#!/bin/bash
+export JENKINS_HOME=/data/devops/JenkinsHome/
+cd /opt/devops/
+java -jar jenkins.war --httpPort=7070
+
+Write the lines in ~/.bash_profile(bashrc)
+==========================================
+
+# Set Jenkins Home Directory
+export JENKINS_HOME=/data/devops/JenkinsHome/
+
+
+
+# Set maven Home Directory
+export PATH=/opt/devops/apache-maven-3.5.2/bin:$PATH
+
+
+
+
+Project URL:
+============
+
+https://github.com/ar012/maven-project.git
+
+file:///data/devops/maven-demo-project
+
+jenkins user:
+=============
+sudo useradd -m -U -d /data/devops/JenkinsHome/ -s /bin/false jenkins
+
+
+Installing Jenkins as a Unix daemon
+===================================
+[Unit]
+Description=Jenkins Daemon
+
+[Service]
+Environment=JENKINS_HOME=/data/devops/JenkinsHome/
+ExecStart=/usr/bin/java -jar /opt/devops/jenkins.war --httpPort=7070
+User=jenkins
+
+[Install]
+WantedBy=multi-user.target
+
+
+
+
+
+https://wiki.jenkins.io/display/JENKINS/Installing+Jenkins+as+a+Unix+daemon

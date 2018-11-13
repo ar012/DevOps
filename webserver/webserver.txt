@@ -1,0 +1,18 @@
+How To Configure an Apache Virtual Host?
+========================================
+
+https://www.rootusers.com/how-to-configure-an-apache-virtual-host/
+
+
+
+Name-based Virtual Host Support
+-------------------------------
+https://httpd.apache.org/docs/2.4/vhosts/name-based.html
+
+
+VirtualHost Examples
+--------------------
+https://httpd.apache.org/docs/2.4/vhosts/examples.html
+
+
+

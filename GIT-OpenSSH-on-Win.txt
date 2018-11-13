@@ -1,0 +1,68 @@
+Installing SFTP/SSH Server on Windows using OpenSSH:
+====================================================
+
+https://winscp.net/eng/docs/guide_windows_openssh_server#installing_sftp_ssh_server
+
+
+C:\Program Files\OpenSSH> powershell.exe -ExecutionPolicy Bypass -File install-sshd.ps1
+[SC] SetServiceObjectSecurity SUCCESS
+sshd and ssh-agent services successfully installed
+
+C:\Program Files\OpenSSH>
+C:\Program Files\OpenSSH> New-NetFirewallRule -Name sshd -DisplayName 'OpenSSH Server (sshd)' -Enabled True -Direction Inbound -Protocol TCP -Action Allow -LocalPort 22
+'New-NetFirewallRule' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Program Files\OpenSSH>powershell
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+PS C:\Program Files\OpenSSH>
+PS C:\Program Files\OpenSSH>
+PS C:\Program Files\OpenSSH> New-NetFirewallRule -Name sshd -DisplayName 'OpenSSH Server (sshd)' -Enabled True -Directio
+n Inbound -Protocol TCP -Action Allow -LocalPort 22
+
+
+Name                  : sshd
+DisplayName           : OpenSSH Server (sshd)
+Description           :
+DisplayGroup          :
+Group                 :
+Enabled               : True
+Profile               : Any
+Platform              : {}
+Direction             : Inbound
+Action                : Allow
+EdgeTraversalPolicy   : Block
+LooseSourceMapping    : False
+LocalOnlyMapping      : False
+Owner                 :
+PrimaryStatus         : OK
+Status                : The rule was parsed successfully from the store. (65536)
+EnforcementStatus     : NotApplicable
+PolicyStoreSource     : PersistentStore
+PolicyStoreSourceType : Local
+
+
+
+PS C:\Program Files\OpenSSH>
+
+
+git init
+Initialized empty Git repository in C:/project.git/.git/
+
+git remote add origin file:///D:/myrepo.git
+
+git config user.email "ar@cts.com"
+
+git config user.name "abdurrazzak"
+
+git push -u origin master
+
+
+
+git clone file:///D:/myrepo.git
+
+
+ scp -r munir@ws17:/D:/myrepo.git
+

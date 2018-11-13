@@ -1,0 +1,65 @@
+step 01: download mongo msi installer for windows
+
+step 02: install MongoDB server selecting complete
+
+step 04: Add MongoDB binaries 'C:\Program Files\MongoDB\Server\4.0\bin' to the System PATH
+
+step 05: create C:\data\db and C:\data\log folders
+
+step 06: create a file C:\data\mongo.cfg
+systemLog:
+  destination: file
+  path: c:\data\log\mongod.log
+storage:
+  dbPath: c:\data\db
+
+
+step 07: open cmd Run as administrator
+mongod -> To run MongoDB server
+mongo  -> To run MongoDB shell
+
+step 08: for configuration MongoDB data directory and log file
+mongod --config "C:\data\mongo.cfg" --install
+
+C:\mongodb\mongo.cfg
+systemLog:
+  destination: file
+  path: C:\mongodb\log\mongo.log
+storage:
+  dbPath: C:\mongodb\data\db
+
+
+
+mongod --config "C:\mongodb\mongo.cfg" --install
+
+
+Step 09: start and stop MongoDB as service
+net start MongoDB -> To start MongoDB service
+net stop MongoDB  -> To stop MongoDB service
+
+
+
+======== OR ================
+step 01: download mongo msi installer for windows
+
+step 02: install MongoDB server selecting custom to C:/mongodb
+
+step 03: create C:\mongodb\db and C:\mongodb\log folders
+
+Step 04: open cmd as administrator in C:\mongodb\bin and run
+mongod --directoryperdb --dbpath C:\mongodb\data\db --logpath C:\mongodb\log\mongo.log --logappend --rest --install
+
+
+mongod.exe --dbpath="c:\mongodb\data\db"
+
+Step 05: start MongoDB service
+net start MongoDB
+
+Step 06: Add MongoDB binaries 'C:\mongodb\bin' to the System PATH
+
+====================================================================
+https://www.configserverfirewall.com/mongodb/install-mongodb-windows/
+
+https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/
+
+https://www.guru99.com/installation-configuration-mongodb.html

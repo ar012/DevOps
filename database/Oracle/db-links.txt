@@ -1,0 +1,3 @@
+Databse backup and restore
+--------------------------
+https://tecadmin.net/backup-and-restore-database-in-postgresql/

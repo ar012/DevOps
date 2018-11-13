@@ -1,0 +1,5 @@
+Databse backup and restore
+--------------------------
+5 Tips to Backup and Restore Database in PostgreSQL
+===================================================
+https://tecadmin.net/backup-and-restore-database-in-postgresql/
