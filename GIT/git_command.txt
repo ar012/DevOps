@@ -1,0 +1,177 @@
+﻿git <command> 
+=============
+01.	init
+02.	add
+03.	commit
+04.	push
+05. 	pull
+06. 	status
+07. 	diff
+08. 	log
+09. 	show
+10. 	reset
+11. 	branch
+12.	checkout
+13.	merge
+14.	stash
+15.	clean
+
+16.	clone
+
+git remote add origin git@192.168.100.201:/data/gitrepo
+
+git clone git@192.168.100.201:/data/gitrepo ctrendsee
+git clone --single-branch git@192.168.100.201:/data/gitrepo/ctrendsee ctrendsee --branch dev
+
+git init
+
+git add <file_name>				e.g. file_name=index.html
+
+git add .  					[add all file to git-repo]
+
+git status
+
+git status -s
+
+git config --global user.name "user_name"	e.g. user_name=Abdur Razzak
+
+git config --global user.email "user_email"	e.g. user_email=abdur.razzak@ctrends-software.com
+
+git config --list  
+
+
+git commit -m "1st commit"
+
+git commit -am "1st commit"
+
+git log
+
+git log <file_name>
+
+git show <commit_id>
+
+git diff <commit_id>
+
+git checkout <commit_id>
+
+git checkout <commit_id> <file_name>
+
+git reset --soft <commit_id>
+
+git reset --hard <commit_id>
+
+git --amend
+
+git --amend <file_name>
+
+git stash   --> use for temporary save
+
+git stash pop [or git stash apply]   
+
+git stash list  --> show number of stashed
+
+git stash pop stash@{1}			e.g. stash@{1}= stashed number
+
+git stash clear 
+
+
+git clean -f -n 	n = dry-run
+
+git clean -f   --> clean untracked file(s)
+
+-----------*************------------------			
+
+Git commands for local branch
+=============================
+
+1. To create local branch:
+
+git checkout -b <branch_name>	 (e.g. company_create_104.1)
+
+2. To commit local branch:
+
+git commit -m “message” <file name>
+
+
+3. To pull from local branch that you have created:
+
+git pull origin <your branch name>
+
+
+4. To push local branch that you have created :
+
+git push -u origin your branch name`
+
+
+5. To merge when I am done with a branch:
+
+git checkout <dev>
+git merge --no-ff <your branch name>
+
+
+6. To delete branch from git:
+
+git branch -d <your branch name>
+
+After git clone from local branch, I do not see my remote branch. We can solve this following command :
+
+git branch -t <your remote branch name> origin/<your local branch name> (eg. git branch -t dev origin/internalorder_edit_227.1)
+
+OR
+git checkout -b dev origin/internalorder_edit_227.1
+
+
+look at the local branches in your repository:
+git branch
+
+But there are other branches hiding in your repository! You can see these using the -a flag:
+git branch -a
+
+
+
+
+
+down vote
+just two commands save my life
+
+1. This will list down all previous HEADs
+
+git reflog
+2. This will revert the HEAD to commit that you deleted.
+
+git reset --hard <your deleted commit>
+ex. git reset --hard b4b2c02
+
+
+
+The data still exists out in github, you can create a new branch from the old data:
+
+git checkout origin/BranchName #get a readonly pointer to the old branch
+git checkout –b BranchName #create a new branch from the old
+git push origin BranchName #publish the new branch
+
+
+
+git branch
+
+git branch -a
+
+git log
+
+git log --all
+
+git checkout maodud
+
+git checkout -b dev
+
+git push -u origin dev
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,8 @@
+Understanding Microservices:
+============================
+
+https://www.slideshare.net/mahtonu/understanding-microservices
+
+Youtube video:
+=============
+https://www.youtube.com/watch?v=tNlp7HS533g&t=39s
