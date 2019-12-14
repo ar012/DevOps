@@ -1,0 +1,38 @@
+#  yaml ain't markup language
+person: 
+    name: &myname "mike"
+    occupation: 'programmer'
+    age: !!float 23   # 23.0
+    gpa: !!str 3.5    # "3.5"
+    fav_num: 1e+10
+    male: true
+    birthday: 1994-02-06 14:33:22   # ISO 8601
+    flaws: null
+    hobbies:
+      - hiking
+      - movies
+      - riding bike
+    movies: ["Dark Knight", "Good Will Hunting"]
+    friends:
+      - name: "Steph"
+        age: 22
+      - {name: "Adam", age: 22}
+      -
+        name: "joe"
+        age: 23
+    description: >
+      hsidfkkkkkkkkkkkkkkkkkkk lsdfd 
+      lsdfd fld f
+      ld fls f dl ls fl dll sd fld f
+    signature: |
+      Mike
+      Giraffe Academy
+      email - giraffeacademy@gmail.com
+    id: *myname
+
+    base: &base
+      var1: value1
+
+    foo:
+      <<: *base  # var1; value1
+      var2: value2
