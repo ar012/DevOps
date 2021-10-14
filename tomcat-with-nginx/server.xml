@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Server port="7030" shutdown="SHUTDOWN">
+    <Listener className="org.apache.catalina.startup.VersionLoggerListener"/>
+    <Listener className="org.apache.catalina.core.JreMemoryLeakPreventionListener"/>
+    <Listener className="org.apache.catalina.mbeans.GlobalResourcesLifecycleListener"/>
+    <Listener className="org.apache.catalina.core.ThreadLocalLeakPreventionListener"/>
+
+    <Service name="Catalina">
+        <Connector
+                port="8030"
+                protocol="HTTP/1.1"
+                redirectPort="8443"
+                maxHttpHeaderSize="8192"
+                URIEncoding="UTF-8"
+        />
+        <Connector
+                port="9030"
+                protocol="HTTP/1.1"
+                redirectPort="8443"
+                maxHttpHeaderSize="8192"
+                scheme="https"
+                proxyPort="443"
+                URIEncoding="UTF-8"
+        />
+
+        <Engine name="Catalina" defaultHost="localhost">
+            <Host
+                    name="stage1.selftics.com"
+                    appBase="webapps"
+                    unpackWARs="true"
+                    autoDeploy="true"
+            >
+                <Alias>localhost</Alias>
+            </Host>
+        </Engine>
+    </Service>
+</Server>

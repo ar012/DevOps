@@ -1,0 +1,17 @@
+[Unit]
+Description=stage1.selftics.com Instance
+After=network.target
+
+[Service]
+Type=forking
+
+User=tomcat
+Group=tomcat
+
+Environment='UMASK=0022'
+
+ExecStart=/home/virtual/stage1.selftics.com/tomcat/bin/startup.sh
+ExecStop=/bin/kill -15 $MAINPID
+
+[Install]
+WantedBy=multi-user.target
